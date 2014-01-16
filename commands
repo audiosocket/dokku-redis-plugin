@@ -65,7 +65,7 @@ case "$1" in
         docker stop $ID
     fi
     # Remove image
-    IMAGE=$(docker images | grep "$REDIS_IMAGE " |  awk '{print $1}')
+    IMAGE=$(docker images | grep "$REDIS_IMAGE" |  awk '{print $1}')
     if [[ ! -z $IMAGE ]]; then
         docker rmi $IMAGE
     fi
